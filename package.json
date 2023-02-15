@@ -1,0 +1,29 @@
+{
+  "name": "mastodon-boost-graph",
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Markus Unterwaditzer <markus-honeypot@unterwaditzer.net>",
+  "license": "MIT",
+  "volta": {
+    "node": "18.14.0",
+    "yarn": "1.22.19"
+  },
+  "scripts": {
+    "build": "node buildscript.js",
+    "watch": "find src/ | entr -sr 'yarn build && http-server www/'",
+    "fmt": "prettier --write src/ www/index.html"
+  },
+  "dependencies": {
+    "@tsconfig/svelte": "^3.0.0",
+    "esbuild": "^0.17.8",
+    "esbuild-svelte": "^0.7.3",
+    "http-server": "^14.1.1",
+    "prettier": "^2.8.4",
+    "prettier-plugin-svelte": "^2.9.0",
+    "purecss": "^3.0.0",
+    "svelte": "^3.55.1",
+    "svelte-check": "^3.0.3",
+    "svelte-preprocess": "^5.0.1"
+  }
+}
